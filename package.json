@@ -2,7 +2,9 @@
   "name": "branch-protector",
   "version": "1.0.0",
   "description": "Protects a git branch from accidental commits",
-  "bin": "index.js",
+  "bin": {
+    "branch-protector": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +15,15 @@
   ],
   "author": "James Coward",
   "license": "ISC",
-  "dependencies": {
-  }
+  "dependencies": {},
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamescoward/branch-protector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamescoward/branch-protector/issues"
+  },
+  "homepage": "https://github.com/jamescoward/branch-protector#readme"
 }
