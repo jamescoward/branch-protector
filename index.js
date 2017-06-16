@@ -4,7 +4,7 @@ const getBranch = require('./lib/getBranch');
 
 const protectedBranch = process.argv[2];
 let action = process.argv[3];
-if (!action) {
+if(!action) {
   action = 'push'
 }
 
@@ -16,11 +16,15 @@ if (!protectedBranch) {
   process.stdout.write('USAGE: branch-protector <BRANCH-TO-PROTECT>\n');
 } else {
   getBranch().then((branch) => {
-    if (branch.trim() !== protectedBranch) {
-      // we good
+    const trimmedBranch = branch.trim();
+    if (trimmedBranch === protectedBranch) {
+      return getConfirmation(branch.trim(), action);
+    }
+    return 'yes';
+  }).then((answer) => {
+    const lowerTrim = answer.toLowerCase().trim();
+    if (lowerTrim === 'yes' || lowerTrim === 'y') {
       process.exitCode = 0;
-    } else {
-      process.stdout.write(`Tried to ${action} to protected branch ${protectedBranch}!\n`);
     }
   });
 }
