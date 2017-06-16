@@ -1,0 +1,19 @@
+{
+  "name": "branch-protector",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Protects a git branch from accidental commits",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "branch",
+    "protect"
+  ],
+  "author": "James Coward",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
