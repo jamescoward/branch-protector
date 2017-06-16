@@ -5,6 +5,11 @@ Tries to prevent you pushing to a git branch by accident
 branch-protector doesn't itself do anything to prevent you from pushing to a branch that you didn't mean to. You need to run it on a git hook.
 It takes an argument of the branch you wish to protect and will return an exit code of 1 if you are currently on that branch, preventing the hooked git action from running.
 
+## Requirements 
+
+`node >= 4`
+`git >= 1.8`
+
 ## Install
 `npm i -D branch-protector`
 
