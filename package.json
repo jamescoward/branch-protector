@@ -1,6 +1,5 @@
 {
   "name": "branch-protector",
-  "private": true,
   "version": "1.0.0",
   "description": "Protects a git branch from accidental commits",
   "bin": "index.js",
